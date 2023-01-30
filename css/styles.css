@@ -33,7 +33,9 @@ header .subtitle {
 footer {
   display: flex;
   justify-content: center;
-  position: sticky;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   height: 92px;
   background-color: white;
@@ -65,6 +67,7 @@ footer {
   overflow-y: auto;
   overflow-x: hidden;
   padding: 21px 0 0 0;
+  margin-bottom: 100px;
 }
 
 .secao {
@@ -159,6 +162,10 @@ footer {
 
 .tudo-selecionado {
   background-color: #32B72F;
+}
+
+.modal {
+
 }
 
 ion-icon {
