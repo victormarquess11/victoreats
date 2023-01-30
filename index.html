@@ -120,10 +120,34 @@
     </div>
   </div>
 
+  <aside class="confirmacao esconder">
+    <div class="confirmacao-detalhes">
+      <h1>Confirme seu pedido</h1>
+      <ul>
+        <li>
+          <div class="pratoEscolhido">nenhum</div>
+          <div class="pratoEscolhidoPreco">R$ 0.0</div>
+        </li>
+        <li>
+          <div class="bebidaEscolhida">nenhum</div>
+          <div class="bebidaEscolhidaPreco">R$ 0.0</div>
+        </li>
+        <li>
+          <div class="sobremesaEscolhida">nenhum</div>
+          <div class="sobremesaEscolhidaPreco">R$ 0.0</div>
+        </li>
+        <li>
+          <div class="total">TOTAL</div>
+          <div class="totalPreco"></div>
+        </li>
+        <button onclick="finishOrder()">Tudo certo! Pode pedir!</button>
+        <p class="cancelar" onclick="redoOrder()">Cancelar</p>
+      </ul>
+    </div>
+  </aside>
+
   <footer>
-    <a href="https://google.com" target="_blank" class="wpp-link">
-      <button class="btn-fechar-pedido" disabled>Selecione os 3 itens para fechar o pedido</button>
-    </a>
+      <button class="btn-fechar-pedido" onclick="reviewOrder()" disabled>Selecione os 3 itens para fechar o pedido</button>
   </footer>
   
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

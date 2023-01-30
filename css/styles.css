@@ -1,9 +1,23 @@
 * {
   box-sizing: border-box;
+
+  /* cores tema */
+  --vermelho: #CF2B2B;
+  --cinza-claro: #E5E5E5;
+  --cinza-escuro: #CBCBCB;
+  --branco: #FFF;
+  --preto: #333;
+  --verde-escuro: #32B72F;
+  --verde-claro: #50D074;
+}
+
+body {
+ font-family: 'Roboto', sans-serif;
+ background-color: #E5E5E5;
 }
 
 header {
-  background-color: #CF2B2B;
+  background-color: var(--vermelho);
   display: flex;
   flex-direction: column;
   color: white;
@@ -43,7 +57,7 @@ footer {
 }
 
 .btn-fechar-pedido {
-  background-color: #CBCBCB;
+  background-color: var(--cinza-escuro);
   border: none;
   border-radius: 50px;
   width: 364px;
@@ -140,7 +154,7 @@ footer {
 }
 
 .carrosel .selecionado {
-  box-shadow: inset 0px 0px 0px 5px #32B72F;
+  box-shadow: inset 0px 0px 0px 5px var(--verde-escuro);
 }
 
 .item .end {
@@ -151,21 +165,89 @@ footer {
 }
 
 .item .selected-checkmark {
+  font-size: 19px;
   border-radius: 50%;
   color: white;
-  background-color: #32B72F;
+  background-color: var(--verde-escuro);
+}
+
+.tudo-selecionado {
+  background-color: var(--verde-escuro);
+  font-weight: 700;
+}
+
+.confirmacao {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 19px;
+  font-size: 22px;
+  line-height: 26px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.confirmacao-detalhes {
+  background-color: var(--verde-claro);
+  color: var(--branco);
+  width: 377px;
+  height: 353px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 9px;
+  font-weight: 300;
+}
+
+.confirmacao-detalhes * {
+  margin: 5px 26px;
+}
+
+.confirmacao-detalhes li {
+  /* margin-top: 3px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmacao-detalhes .total {
+  font-weight: 700;
+}
+
+
+.confirmacao-detalhes button {
+  border-radius: 100px;
+  padding: 5px 10px;
+  color: var(--verde-claro);
+  background-color: var(--branco);
+  font-weight: 700;
+  width: 333px;
+  height: 50px;
+  font-size: 22px;
+  letter-spacing: 0.018em;
+  border: none;
+}
+
+.confirmacao-detalhes button:hover {
+  cursor: pointer;
+}
+
+.confirmacao .cancelar {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
 }
 
 .esconder {
   display: none;
-}
-
-.tudo-selecionado {
-  background-color: #32B72F;
-}
-
-.modal {
-
 }
 
 ion-icon {

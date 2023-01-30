@@ -67,15 +67,17 @@ function registerSelectedSection(title, section, price) {
   }
 }
 
-function changeWppLink() {
+function createWppLink() {
+  const phoneNumber = "5521999999999"
   const elementLink = document.querySelector('.wpp-link');
-  orderString = `Olá, gostaria de fazer o pedido:
+  let orderMessage = `Olá, gostaria de fazer o pedido:
   - Prato: ${selectedPrato} - R$ ${pricePrato.toFixed(2)}
   - Bebida: ${selectedBebida} - R$ ${priceBebida.toFixed(2)}
   - Sobremesa: ${selectedSobremesa} - R$ ${priceSobremesa.toFixed(2)}
   Total: R$ ${totalPrice}`
 
-  elementLink.href = "https://wa.me/5521999999999?text=" + encodeURIComponent(orderString);
+  orderMessage = encodeURIComponent(orderMessage);
+  return `https://wa.me/${phoneNumber}?text=${orderMessage}`;
 }
 
 function computePrice() {
@@ -96,4 +98,25 @@ function checkPrice(item) {
     return elementPrice.innerText;
   }
   return null;
+}
+
+function reviewOrder() {
+  document.querySelector(".confirmacao").classList.remove("esconder");
+
+  document.querySelector(".pratoEscolhido").innerHTML = selectedPrato;
+  document.querySelector(".pratoEscolhidoPreco").innerHTML = `R$ ${pricePrato.toFixed(2)}`;
+  document.querySelector(".bebidaEscolhida").innerHTML = selectedBebida;
+  document.querySelector(".bebidaEscolhidaPreco").innerHTML = `R$ ${priceBebida.toFixed(2)}`;
+  document.querySelector(".sobremesaEscolhida").innerHTML = selectedSobremesa;
+  document.querySelector(".sobremesaEscolhidaPreco").innerHTML = `R$ ${priceSobremesa.toFixed(2)}`
+
+  document.querySelector(".totalPreco").innerHTML = `R$ ${totalPrice}`
+}
+
+function redoOrder() {
+  document.querySelector(".confirmacao").classList.add("esconder");
+}
+
+function finishOrder() {
+  window.open(createWppLink(), '_blank').focus();
 }
