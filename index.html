@@ -13,31 +13,118 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <h1 class="nav-title">DrivenEats</h1>
-    <h2 class="nav-subtitle">Sua comida em 6 minutos</h2>
-  </nav>
+  <header>
+    <h1 class="title">DrivenEats</h1>
+    <h2 class="subtitle">Sua comida em 6 minutos</h2>
+  </header>
 
   <div class="content">
     <div class="secao prato">
       <h2 class="category-title">Primeiro, seu prato</h2>
-      <div class="carrosel items-prato"></div>
+      <div class="carrosel items-prato">
+        <div class="item" onclick="selectItem(this, 'prato')">
+          <img src="assets/hamburger.jpg" alt="hamburger" />
+          <p class="titulo">Hamburguer</p>
+          <p class="descricao">Hamburguer show de bola, delícia</p>
+          <div class="end">
+            <p class="preco">R$ 34,90</p>
+            <ion-icon class='selected-checkmark esconder' name='checkmark-outline'></ion-icon>
+          </div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'prato')">
+          <img src="assets/hamburger.jpg" alt="hamburger" />
+          <p class="titulo">Hamburguer</p>
+          <p class="descricao">Hamburguer show de bola, delícia</p>
+          <div class="end">
+            <p class="preco">R$ 25,50</p>
+            <ion-icon class='selected-checkmark esconder' name='checkmark-outline'></ion-icon>
+          </div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'prato')">
+          <img src="assets/hamburger.jpg" alt="hamburger" />
+          <p class="titulo">Hamburguer</p>
+          <p class="descricao">Hamburguer show de bola, delícia</p>
+          <div class="end">
+            <p class="preco">R$ 52,40</p>
+            <ion-icon class='selected-checkmark esconder' name='checkmark-outline'></ion-icon>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="secao bebida">
       <h2 class="category-title">Agora, sua bebida</h2>
-      <div class="carrosel items-bebida"></div>
+      <div class="carrosel items-bebida">
+        <div class="item" onclick="selectItem(this, 'bebida')">
+          <img src="assets/coca-lata.jpg" alt="coca" />
+          <p class="titulo">Coca Cola</p>
+          <p class="descricao">Lata 350ml</p>
+          <div class="end">
+            <p class="preco">R$ 6,50</p>
+            <ion-icon class='selected-checkmark esconder' name='checkmark-outline'></ion-icon>
+          </div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'bebida')">
+          <img src="assets/coca-lata.jpg" alt="coca" />
+          <p class="titulo">Coca Cola</p>
+          <p class="descricao">Lata 350ml</p>
+          <div class="end">
+            <p class="preco">R$ 2,20</p>
+            <ion-icon class='selected-checkmark esconder' name='checkmark-outline'></ion-icon>
+          </div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'bebida')">
+          <img src="assets/coca-lata.jpg" alt="coca" />
+          <p class="titulo">Coca Cola</p>
+          <p class="descricao">Lata 350ml</p>
+          <div class="end">
+            <p class="preco">R$ 1,30</p>
+            <ion-icon class='selected-checkmark esconder' name='checkmark-outline'></ion-icon>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="secao sobremesa">
       <h2 class="category-title">Por fim, sua sobremesa</h2>
-      <div class="carrosel items-sobremesa"></div>
+      <div class="carrosel items-sobremesa">
+        <div class="item" onclick="selectItem(this, 'sobremesa')">
+          <img src="assets/brigadeiro.jpg" alt="brigadeiro" />
+          <p class="titulo">Brigadeiro</p>
+          <p class="descricao">Apenas brigadeiro</p>
+          <div class="end">
+            <p class="preco">R$ 3,40</p>
+            <ion-icon class='selected-checkmark esconder' name='checkmark-outline'></ion-icon>
+          </div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'sobremesa')">
+          <img src="assets/brigadeiro.jpg" alt="brigadeiro" />
+          <p class="titulo">Brigadeiro</p>
+          <p class="descricao">Apenas brigadeiro</p>
+          <div class="end">
+            <p class="preco">R$ 2,30</p>
+            <ion-icon class='selected-checkmark esconder' name='checkmark-outline'></ion-icon>
+          </div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'sobremesa')">
+          <img src="assets/brigadeiro.jpg" alt="brigadeiro" />
+          <p class="titulo">Brigadeiro</p>
+          <p class="descricao">Apenas brigadeiro</p>
+          <div class="end">
+            <p class="preco">R$ 5,20</p>
+            <ion-icon class='selected-checkmark esconder' name='checkmark-outline'></ion-icon>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <footer>
-    <button class="btn-fechar-pedido">Selecione os 3 itens para fechar o pedido</button>
+    <button class="btn-fechar-pedido" disabled>Selecione os 3 itens para fechar o pedido</button>
   </footer>
   
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="scripts/scripts.js"></script>
+
 </body>
 </html>
